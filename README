@@ -1,0 +1,25 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=2307
+
+This script formats a paragraph of text so that lines have approximately equal length (set by textwidth). It has the following features:
+
+1. It restores logical cursor location (the number of non-space chars from the start of the formatted text). 
+
+2. It merges multiple blank lines into one.
+
+3. It is LaTeX aware (many commands and the comments) are recognized (and ignored) so that the source file does not look bad after formatting. It yields better (according to the author :-) results than fmt, or the VIM internal formatter.
+
+4. It can be modified to adapted to your own likes (eg. more ignored code blocks) quite easily (see the functions s:CanJoin, s:BlockStart, s:BlockEnd). 
+
+5. It merges multiple spaces into one. (neither fmt nor VIM internal formatter does this). 
+
+6. For lines that start with a space/tab, they are not disturbed. 
+
+7. It is written in VIM script, so no external programs (awk/fmt/perl) are necessary. This is probably against the UNIX principle. But now that VIM offers scripting capability, one can argue that a VIM script is "simpler" (less reading of disk :-). 
+
+8. It can be quite easily extended to format a larger chunk of data (more than just a paragraph). Using the s:FormatLines function provided.
+
+Comments/Suggestions/Improvements are welcomed. You can leave a comment at 
+vim.wikia.com/wiki/User:Lpb612
+
+Note1:  Also take a look at a similar script, Script 2187 http://www.vim.org/scripts/script.php?script_id=2187
+
