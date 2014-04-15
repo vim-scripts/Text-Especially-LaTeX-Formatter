@@ -199,5 +199,4 @@ function s:FormatParagraph()
 	exec "normal ".tmpline."G".tmpcol."|"
 endfunction
 
-silent! unmap K 
-nnoremap <silent><buffer> K :silent call <SID>FormatParagraph()<CR>
+nnoremap <silent><buffer> <Plug>FormatParagraph :silent call <SID>FormatParagraph()<CR>
